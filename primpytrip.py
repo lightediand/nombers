@@ -6,11 +6,12 @@ def ppt(n: int):
     ppt = []
     for j in o:
         for k in o:
-            if k != j and k > j:
+            if k > j:
                 pairs.append((k, j))
     for x in pairs:
         a = x[0]*x[1]
         b = (x[0]**2 - x[1]**2)//2
         c = (x[0]**2 + x[1]**2)//2
-        ppt.append((a, b, c))
+        if c < n:
+            ppt.append((a, b, c))
     return ppt

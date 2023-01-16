@@ -1,25 +1,29 @@
+from nat import nat
 from odd import odd
 from primpytrip import ppt
 from fib import fib
+from even import even
+from square import square
+from triangle import tri
 
-print("Hello and welcome to Nombers!\nWould you like some numbers?\nWe've got numbers.\nHere are the type of numbers we currently have.\nPlease place your order!\n")
+print("Hello and welcome to Nombers!\nYou want numbers?\nWe got numbers.\nHere are the types of numbers we currently have to offer.\nPlease place your order!\n")
 
+
+print("0: Natural numbers")
 print("1: Odd numbers")
 print("2: Primitive Pythagorean triples")
 print("3: Fibonacci numbers")
+print("4: Even numbers")
+print("5: Square numbers")
+print("6: Triangle numbers")
 
-number = input("\nPlease specify an upper bound for your numbers: ")
+number_type = input("\nChoose the type of numbers you wish to generate: ")
 
-number_type = input("Choose the type of numbers you wish to generate: ")
+number = input("Specify an upper bound for your numbers: ")
 
-n = int(number)
 t = int(number_type)
+n = int(number)
 
-if t==1:
-    print(odd(n))
+funcs = [nat, odd, ppt, fib, even, square, tri]
 
-if t==2:
-    print(ppt(n))
-
-if t==3:
-    print(fib(n))
+print(funcs[t](n))
