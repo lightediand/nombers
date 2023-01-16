@@ -18,6 +18,8 @@ Currently we have the following:
 
 6: Triangle numbers
 
+7: Happy numbers
+
 We are always updating our stock with new numbers. 
 
 Check back soon for more!
