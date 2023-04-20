@@ -8,26 +8,22 @@ from triangle import tri
 from happy import happy
 from primes import primes
 
-print("Hello and welcome to Nombers!\nYou want numbers?\nWe got numbers.\nHere are the types of numbers we currently have to offer.\nPlease place your order!\n")
-
-
-print("0: Natural numbers")
-print("1: Odd numbers")
-print("2: Primitive Pythagorean triples")
-print("3: Fibonacci numbers")
-print("4: Even numbers")
-print("5: Square numbers")
-print("6: Triangle numbers")
-print("7: Happy numbers")
-print("8: Prime numbers")
-
-number_type = input("\nChoose the type of numbers you wish to generate: ")
-
-number = input("Specify an upper bound for your numbers: ")
-
-t = int(number_type)
-n = int(number)
+menu=("\nThese are the numbers we currently have to offer.\n0: Natural numbers\n1: Odd numbers\n2: Primitive Pythagorean triples\n3: Fibonacci numbers\n4: Even numbers\n5: Square numbers\n6: Triangle numbers\n7: Happy numbers\n8: Prime numbers\n")
 
 funcs = [nat, odd, ppt, fib, even, square, tri, happy, primes]
 
-print(funcs[t](n))
+print("Hello and welcome to Nombers!\nYou want numbers?\nWe got numbers.\n")
+
+while True:
+    number_type = input("Please place your order. Type menu to show which numbers are available, or type exit to quit: ")
+    if number_type == str("exit"):
+        print("Have a nice day!")
+        break
+    elif number_type == str("menu"):
+        print(menu)
+        number_type = input("Number type: ")
+    number = input("Specify an upper bound for your numbers: ")
+    print("\nComing right up!")
+    t = int(number_type)
+    n = int(number)
+    print(*funcs[t](n), "\n")
