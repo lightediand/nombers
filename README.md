@@ -20,6 +20,10 @@ Currently we have the following:
 
 7: Happy numbers
 
+8: Prime numbers
+
+9: Dodecahedral numbers
+
 We are always updating our stock with new numbers. 
 
 Check back soon for more!
