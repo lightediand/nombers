@@ -7,10 +7,11 @@ from square import square
 from triangle import tri
 from happy import happy
 from primes import primes
+from dodec import dodec
 
-menu=("\nThese are the numbers we currently have to offer.\n0: Natural numbers\n1: Odd numbers\n2: Primitive Pythagorean triples\n3: Fibonacci numbers\n4: Even numbers\n5: Square numbers\n6: Triangle numbers\n7: Happy numbers\n8: Prime numbers\n")
+menu=("\nThese are the numbers we currently have to offer.\n0: Natural numbers\n1: Odd numbers\n2: Primitive Pythagorean triples\n3: Fibonacci numbers\n4: Even numbers\n5: Square numbers\n6: Triangle numbers\n7: Happy numbers\n8: Prime numbers\n9: Dodecahedral numbers")
 
-funcs = [nat, odd, ppt, fib, even, square, tri, happy, primes]
+funcs = [nat, odd, ppt, fib, even, square, tri, happy, primes, dodec]
 
 print("Hello and welcome to Nombers!\nYou want numbers?\nWe got numbers.\n")
 
